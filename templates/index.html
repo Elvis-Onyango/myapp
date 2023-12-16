@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Elvis Consultancies - Home</title>
+  <style>
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          padding-top: 60px; /* Add padding to body to avoid content being hidden behind the sticky header */
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+      }
+
+      nav {
+          background-color: #333;
+          padding: 10px;
+          color: white;
+          text-align: center;
+          width: 100%;
+          z-index: 1000;
+      }
+
+      .navbar-brand {
+          font-size: 1.5rem;
+      }
+
+      .navbar-nav {
+          text-align: center;
+          margin-top: 10px;
+      }
+
+      .nav-link {
+          color: white;
+          margin: 0 15px;
+          text-decoration: none;
+          font-size: 1.2rem;
+      }
+
+      .nav-link i {
+          margin-right: 5px;
+      }
+
+      /* Add padding to the main content to avoid it being hidden behind the sticky header */
+      #main-content {
+          flex: 1;
+          padding-top: 20px; /* Adjust as needed */
+          padding-bottom: 80px; /* Adjust as needed */
+      }
+
+      .center-buttons {
+          text-align: center;
+          margin-top: 20px;
+      }
+
+      /* Style for the sticky footer */
+      .footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 10px;
+          width: 100%;
+          margin-top: auto;
+      }
+
+      .footer i {
+          font-size: 1.5rem;
+          margin: 0 10px;
+      }
+  </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Elvis Consultancies</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('about')}}"><i class="fas fa-info-circle"></i> About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('contact')}}"><i class="fas fa-address-book"></i> Contacts</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('help')}}"><i class="fas fa-question-circle"></i> Help and Support</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('article')}}"><i class="fas fa-handshake"></i> Consult</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-5" id='main-content'>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Welcome to Elvis Consultancies</h1>
+                <div></div>
+                <div class="center-buttons">
+                    <a href="{{url_for('login_file')}}"><button class="btn btn-primary">Login</button></a>
+                    <a href="{{url_for('register_file')}}"><button class="btn btn-secondary">Signup</button></a>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <table>
+            <tr>
+                <td><i class="fab fa-facebook"></i></td>
+                <td><i class="fab fa-linkedin"></i></td>
+                <td><i class="fab fa-github"></i></td>
+                <td><i class="fab fa-instagram"></i></td>
+                <td><i class="fab fa-reddit"></i></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        // JavaScript to add a class when scrolling down for the sticky header
+        window.onscroll = function () {
+            var nav = document.querySelector('nav');
+            if (window.pageYOffset > 0) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+
+            // JavaScript to make footer sticky at the bottom
+            var footer = document.querySelector('.footer');
+            var body = document.body;
+            var html = document.documentElement;
+
+            var height = Math.max(body.scrollHeight, body.offsetHeight,
+                html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+            if (window.innerHeight + window.pageYOffset >= height) {
+                footer.classList.add('sticky-footer');
+            } else {
+                footer.classList.remove('sticky-footer');
+            }
+        };
+      window.onscroll = function () {
+          var nav = document.querySelector('nav');
+          if (window.pageYOffset > 0) {
+              nav.classList.add('sticky');
+          } else {
+              nav.classList.remove('sticky');
+          }
+      };
+    </script>
+</body>
+
+</html>
+

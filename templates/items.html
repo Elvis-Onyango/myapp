@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items List</title>
+</head>
+
+<body>
+    <h1>Items List</h1>
+    <ul>
+        {% for item in items %}
+           <li>{{ item.id }} - {{ item.description }}</li>
+            <li>{{ item.name }} - {{ item.description }}</li>
+            <li>{{ item.email }} - {{ item.description }}</li>
+           <li>{{ item.password }} - {{ item.description }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

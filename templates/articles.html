@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Your Consulting Firm</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background color */
+            padding-top: 56px; /* Adjusted for fixed navbar */
+        }
+        .navbar {
+            background-color: #007bff; /* Blue navbar */
+        }
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #ffffff; /* White navbar toggle icon */
+        }
+        .navbar-dark .navbar-toggler {
+            border-color: #ffffff; /* White border for toggle button */
+        }
+        .footer {
+            background-color: #343a40; /* Dark gray footer */
+            color: #ffffff; /* White text color */
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="{{url_for('index')}}">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('main')}}">Main</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Search</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Welcome to<strong> ELVIS Consulting Firm</strong></h1>
+            <p class="lead">Unlocking Success Together</p>
+
+            <!-- Article Sections -->
+
+            <!-- Article 1 -->
+            <section>
+                <h2>Our Expertise</h2>
+                <p>At Elvis consulting Firm, we leverage a rich pool of experience and expertise. Our team comprises seasoned professionals with a proven track record in delivering exceptional consulting services across diverse industries. We pride ourselves on staying ahead of industry trends and continuously expanding our knowledge to provide cutting-edge solutions to our clients.</p>
+            </section>
+
+            <!-- Article 2 -->
+            <section>
+                <h2>Services We Offer</h2>
+                <p>Explore a comprehensive range of consulting services tailored to meet your unique needs. From strategic planning to operational efficiency, we are dedicated to helping businesses thrive in today's competitive landscape. Our commitment to excellence and client satisfaction drives us to deliver tangible results that positively impact your organization's growth and success.</p>
+            </section>
+
+            <!-- Article 3 -->
+            <section>
+                <h2>Innovative Solutions</h2>
+                <p>Our consultants are adept at crafting innovative solutions that address the dynamic challenges businesses face. We believe in pushing boundaries, thinking creatively, and embracing change to help your organization navigate complexities and seize opportunities for growth.</p>
+            </section>
+
+            <!-- Article 4 -->
+            <section>
+                <h2>Client-Centric Approach</h2>
+                <p>At the core of our philosophy is a client-centric approach. We prioritize understanding your unique needs, challenges, and goals. This approach allows us to tailor our consulting services to align seamlessly with your organization's objectives, ensuring a partnership that yields meaningful and lasting results.</p>
+            </section>
+
+            <!-- Article 5 -->
+            <section>
+                <h2>Strategic Planning</h2>
+                <p>Strategic planning is the cornerstone of successful businesses. Our consultants work closely with you to develop comprehensive strategies that align with your long-term goals. We analyze market trends, competitor landscapes, and internal capabilities to craft a roadmap that ensures sustainable growth and success.</p>
+            </section>
+
+            <!-- Article 6 -->
+            <section>
+                <h2>Operational Efficiency</h2>
+                <p>Efficient operations are crucial for business success. Our consulting services include a focus on streamlining processes, optimizing workflows, and enhancing overall operational efficiency. By identifying and eliminating bottlenecks, we help organizations achieve higher productivity and improved bottom-line results.</p>
+            </section>
+
+            <!-- Article 7 -->
+            <section>
+                <h2>Technology Integration</h2>
+                <p>Embracing the right technology is key to staying competitive. Our consultants specialize in guiding businesses through the integration of cutting-edge technologies. Whether it's adopting cloud solutions, implementing AI, or leveraging data analytics, we ensure that your organization harnesses the power of technology for strategic advantage.</p>
+            </section>
+
+            <!-- Article 8 -->
+            <section>
+                <h2>Financial Advisory</h2>
+                <p>Sound financial management is essential for sustainable growth. Our financial advisory services cover budgeting, forecasting, risk management, and financial analysis. We work collaboratively with clients to develop robust financial strategies that mitigate risks, maximize profits, and support long-term financial health.</p>
+            </section>
+
+            <!-- Article 9 -->
+            <section>
+                <h2>Leadership Development</h2>
+                <p>Strong leadership is the driving force behind successful organizations. We offer tailored leadership development programs aimed at nurturing and enhancing leadership skills within your team. Our approach focuses on empowering leaders to navigate challenges, inspire teams, and drive positive change.</p>
+            </section>
+
+            <!-- Article 10 -->
+            <section>
+                <h2>Market Research</h2>
+                <p>In-depth market research is crucial for informed decision-making. Our consultants conduct comprehensive market analysis to provide valuable insights into industry trends, customer behaviors, and competitive landscapes. Armed with this knowledge, your business can make strategic decisions that set you apart in the market.</p>
+            </section>
+
+            <!-- Article 11 -->
+            <section>
+                <h2>Quality Assurance</h2>
+                <p>Ensuring quality in products and services is non-negotiable. Our quality assurance services help businesses establish and maintain high standards. From developing quality management systems to implementing best practices, we assist organizations in delivering products and services that consistently meet or exceed customer expectations.</p>
+            </section>
+
+            <!-- Article 12 -->
+            <section>
+                <h2>Change Management</h2>
+                <p>Change is inevitable, and managing it effectively is crucial for success. Our change management consulting services guide organizations through transitions, whether it's a shift in processes, technology adoption, or organizational restructuring. We empower teams to embrace change positively and adapt for sustained success.</p>
+            </section>
+
+            <!-- Article 13 -->
+            <section>
+                <h2>Customer Experience</h2>
+                <p>Exceptional customer experience is a competitive advantage. We help businesses enhance their customer journey by analyzing touchpoints, identifying pain points, and implementing strategies to improve overall satisfaction. A positive customer experience fosters loyalty and contributes to long-term business success.</p>
+            </section>
+
+            <!-- Article 14 -->
+            <section>
+                <h2>Global Expansion</h2>
+                <p>Navigating the complexities of global expansion requires strategic planning and localized insights. Our consultants provide guidance on entering new markets, considering cultural nuances, and adapting business strategies for international success. Whether expanding regionally or globally, we help organizations seize new opportunities.</p>
+            </section>
+
+            <!-- Article 15 -->
+            <section>
+                <h2>Sustainability Consulting</h2>
+                <p>Business sustainability is no longer a choice but a necessity. Our sustainability consulting services assist organizations in integrating environmentally and socially responsible practices. From reducing carbon footprints to implementing ethical supply chain practices, we help businesses thrive in a sustainable future.</p>
+            </section>
+
+            <!-- Article 16 -->
+            <section>
+                <h2>Risk Management</h2>
+                <p>Identifying and mitigating risks is vital for safeguarding your organization's success. Our risk management services cover a comprehensive assessment of potential threats and the development of strategies to mitigate them. We work closely with clients to create risk-resilient organizations.</p>
+            </section>
+
+            <!-- Article 17 -->
+            <section>
+                <h2>Human Resources Consulting</h2>
+                <p>Optimizing human resources is critical for organizational success. Our HR consulting services cover talent acquisition, employee development, and workplace culture enhancement. By aligning HR strategies with business objectives, we help organizations build strong, engaged, and high-performing teams.</p>
+            </section>
+
+            <!-- Article 18 -->
+            <section>
+                <h2>Strategic Partnerships</h2>
+                <p>Building strategic partnerships can unlock new opportunities for growth. Our consultants assist businesses in identifying and establishing mutually beneficial partnerships. Whether it's collaborating with other companies, forming alliances, or entering joint ventures, we guide organizations in creating strategic alliances that drive success.</p>
+            </section>
+
+            <!-- Article 19 -->
+            <section>
+                <h2>Data Analytics</h2>
+                <p>Harnessing the power of data is crucial in today's business landscape. Our data analytics services help organizations collect, analyze, and interpret data to make informed decisions. From customer insights to operational efficiency, we empower businesses to leverage data for strategic advantage.</p>
+            </section>
+
+            <!-- Article 20 -->
+            <section>
+                <h2>Continuous Improvement</h2>
+                <p>Continuous improvement is at the heart of successful organizations. Our consultants work with businesses to establish a culture of continuous improvement. Through regular assessments, feedback mechanisms, and iterative processes, we help organizations adapt to changing landscapes and continuously enhance their operations.</p>
+            </section>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container text-center">
+        <!-- Add social media icons here (e.g., Font Awesome or other icon libraries) -->
+        <i class="fab fa-facebook-f mr-3"></i>
+        <i class="fab fa-twitter mr-3"></i>
+        <i class="fab fa-linkedin-in mr-3"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

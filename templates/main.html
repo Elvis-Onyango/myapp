@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Elvis Consultancies</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 60px; /* Add padding to body to avoid content being hidden behind the sticky header */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .nav-link {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .nav-link i {
+            margin-right: 5px;
+        }
+
+        /* Add padding to the main content to avoid it being hidden behind the sticky header */
+        #main-content {
+            flex: 1;
+            padding-top: 20px; /* Adjust as needed */
+            padding-bottom: 80px; /* Adjust as needed */
+        }
+
+        .center-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer i {
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
+        /* Style for sticky-top h1 */
+        h1.sticky {
+            position: sticky;
+            top: 60px; /* Adjust as needed based on your header height */
+            background-color: white; /* Add background color as needed */
+            z-index: 1000;
+            padding: 10px;
+        }
+
+        /* Style for button at the bottom of aside */
+        .bottom-button {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Style for additional articles */
+        .article {
+            width: 100%;
+            height: 100%;
+            background-color: #3498db;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+
+        .article i {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        /* Style for sticky-top header */
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Style for sticky-bottom footer */
+        .sticky-bottom {
+            position: sticky;
+            bottom: 0;
+            z-index: 1000;
+        }
+      .dropdown-menu a {
+          color: #343a40; /* Adjust text color as needed */
+          display: flex;
+          align-items: center;
+      }
+
+      .dropdown-menu a:hover {
+          background-color: #007bff; /* Adjust hover background color as needed */
+          color: white; /* Adjust text color on hover as needed */
+      }
+
+      .dropdown-menu .icon {
+          margin-right: 10px;
+      }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-building"></i> Elvis Consultancies
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('index')}}"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('about')}}"><i class="fas fa-info-circle"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('contact')}}"><i class="fas fa-address-book"></i> Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('article')}}"><i class="fas fa-handshake"></i> Consult</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('help')}}"><i class="fas fa-question-circle"></i> Help & Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="far fa-newspaper"></i> Articles</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id='main-content'>
+        <div class="row">
+
+            <!-- Aside (Left Sidebar) -->
+            <aside class="col-md-3 bg-info sticky-top" style="height: 80vh;margin-top:10px;">
+               
+              <ul>
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bars"></i> menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#"><i class="fas fa-user icon"></i> Item 1</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-cogs icon"></i> Item 2</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-envelope icon"></i> Item 3</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-search icon"></i> Item 4</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-bell icon"></i> Item 5</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-calendar-alt icon"></i> Item 6</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-chart-bar icon"></i> Item 7</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-wrench icon"></i> Item 8</a>
+                        </div>
+                    </li>
+              </ul>
+                <!-- Add additional sidebar content as needed -->
+                <a href="{{url_for('logout')}}" class="btn btn-danger btn-block mt-3 bottom-button">Logout</a>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="col-md-9">
+                <div class="container">
+                    <h1 class="sticky">Welcome to Elvis Consultancies</h1>
+                    <!-- Main article content goes here -->
+
+                    <!-- Articles -->
+                    <div class="row" style="margin-top:60px;">
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-briefcase fa-3x"></i>
+                                <p>Article 1</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-chart-bar fa-3x"></i>
+                                <p>Article 2</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-globe fa-3x"></i>
+                                <p>Article 3</p>
+                            </div>
+                        </div>
+                        <!-- Additional Articles -->
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-camera fa-3x"></i>
+                                <p>Article 4</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-music fa-3x"></i>
+                                <p>Article 5</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-gamepad fa-3x"></i>
+                                <p>Article 6</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-film fa-3x"></i>
+                                <p>Article 7</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-plane fa-3x"></i>
+                                <p>Article 8</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-book fa-3x"></i>
+                                <p>Article 9</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="article">
+                                <i class="fas fa-coffee fa-3x"></i>
+                                <p>Article 10</p>
+                            </div>
+                        </div>
+                        <!-- End Additional Articles -->
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center sticky-bottom" style="height: 20vh;">
+        <div class="container">
+            <div class="follow-us">
+                <p>Follow Us On:</p>
+                <!-- Add your social media icons here -->
+                <a href="#" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <!-- Add more social media icons as needed -->
+            </div>
+            <hr class="my-4">
+            <p style="margin-bottom:15px;">&copy; 2023 Elvis Consultancies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

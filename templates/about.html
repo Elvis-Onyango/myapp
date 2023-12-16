@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Articles - Elvis Consultancies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Elvis Consultancies</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('index')}}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('main')}}">Main</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('contact')}}">Contacts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('help')}}">Help and Support</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('article')}}">Consult</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Article Content -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 sidebar">
+            <!-- Profile Pic Icon (You can replace the placeholder image URL) -->
+            <img src="path/to/profile-pic.jpg" alt="Profile Pic" class="img-fluid rounded-circle mb-3">
+            <!-- Add any other sidebar content here -->
+        </div>
+        <!-- Main Body Content -->
+        <div class="col-md-9 main-content">
+            <!-- Article Section 1 -->
+            <article>
+                <h1>About Elvis Consultancies</h1>
+                <p>Welcome to Elvis Consultancies, your trusted partner for a wide range of consultancy services. With a commitment to excellence and a focus on delivering value to our clients, we stand out as a reliable and dedicated consultancy firm.</p>
+                <!-- More content for the first article -->
+            </article>
+
+            <!-- Article Section 2 -->
+            <article>
+                <h1>The Journey to Success</h1>
+                <p>Embark on a journey of success with Elvis Consultancies. Our team is dedicated to guiding businesses and individuals towards achieving their goals. Learn more about our journey and how we can be your strategic partner.</p>
+                <!-- More content for the second article -->
+            </article>
+
+            <!-- Article Section 3 -->
+            <article>
+                <h1>Innovation and Excellence</h1>
+                <p>At Elvis Consultancies, we thrive on innovation and strive for excellence. Discover how our innovative solutions and commitment to quality have helped businesses overcome challenges and achieve sustainable success.</p>
+                <!-- More content for the third article -->
+            </article>
+
+            <!-- Add more articles as needed -->
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-reddit"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+      // JavaScript to add a class when scrolling down for the sticky header
+      window.onscroll = function () {
+          var nav = document.querySelector('nav');
+          if (window.pageYOffset > 0) {
+              nav.classList.add('sticky');
+          } else {
+              nav.classList.remove('sticky');
+          }
+
+          // JavaScript to make footer sticky at the bottom
+          var footer = document.querySelector('.footer');
+          var body = document.body;
+          var html = document.documentElement;
+
+          var height = Math.max(body.scrollHeight, body.offsetHeight,
+              html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+          if (window.innerHeight + window.pageYOffset >= height) {
+              footer.classList.add('sticky-footer');
+          } else {
+              footer.classList.remove('sticky-footer');
+          }
+      };
+    window.onscroll = function () {
+        var nav = document.querySelector('nav');
+        if (window.pageYOffset > 0) {
+            nav.classList.add('sticky');
+        } else {
+            nav.classList.remove('sticky');
+        }
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Elvis Consultancies - Contact</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Elvis Consultancies</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
+                <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+                <li class="nav-item"><a class="nav-link" href="consult.html">Consult</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1>Contact Us</h1>
+                <p>If you have any questions or need assistance, please feel free to contact us using the information
+                    below:</p>
+
+                <h2>Phone Numbers</h2>
+                <p>Main Phone: +254 742 497 659</p>
+                <p>Secondary Phone: +254 113 426 373</p>
+
+                <h2>Email Addresses</h2>
+                <p>Email 1: onyangoelvis804@gmail.com</p>
+                <p>Email 2: elvisonyango840@gmail.com</p>
+                <p>Email 3: elvisonyangoachola@gmail.com</p>
+
+                <h2>Address</h2>
+                <p>Elvis Consultancies Ltd</p>
+                <p>Nairobi Consulting Street</p>
+                <p>Nairobi city, kenya</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <table>
+            <tr>
+                <td><i class="fab fa-facebook"></i></td>
+                <td><i class="fab fa-linkedin"></i></td>
+                <td><i class="fab fa-github"></i></td>
+                <td><i class="fab fa-instagram"></i></td>
+                <td><i class="fab fa-reddit"></i></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+      // JavaScript to add a class when scrolling down for the sticky header
+      window.onscroll = function () {
+          var nav = document.querySelector('nav');
+          if (window.pageYOffset > 0) {
+              nav.classList.add('sticky');
+          } else {
+              nav.classList.remove('sticky');
+          }
+
+          // JavaScript to make footer sticky at the bottom
+          var footer = document.querySelector('.footer');
+          var body = document.body;
+          var html = document.documentElement;
+
+          var height = Math.max(body.scrollHeight, body.offsetHeight,
+              html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+          if (window.innerHeight + window.pageYOffset >= height) {
+              footer.classList.add('sticky-footer');
+          } else {
+              footer.classList.remove('sticky-footer');
+          }
+      };
+    window.onscroll = function () {
+        var nav = document.querySelector('nav');
+        if (window.pageYOffset > 0) {
+            nav.classList.add('sticky');
+        } else {
+            nav.classList.remove('sticky');
+        }
+    };
+  </script>
+</body>
+
+</html>
